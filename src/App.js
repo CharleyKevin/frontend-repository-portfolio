@@ -62,7 +62,23 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="page">
+      <div className="form">
+        <br/>
+        <p>Cadastro de Repositórios</p>
+        <br/>
+        <label>Título</label><br/>
+        <input className="input" type="text" id="newTitle"/><br/>
+        <label>Url</label><br/>
+        <input className="input" type="text" id="newUrl"/><br/>
+        <label>Tecnologia 1</label><br/>
+        <input className="input" type="text" id="newTechnology1"/><br/>
+        <label>Tecnologia 2</label><br/>
+        <input className="input" type="text" id="newTechnology2"/><br/>
+        <label>Tecnologia 3</label><br/>
+        <input className="input" type="text" id="newTechnology3"/><br/>
+        <button className="submit" onClick={handleAddRepository}>Adicionar</button>
+      </div>
       <ul data-testid="repository-list">
         { repositories.map(repository => 
               <li key={repository.id}>
@@ -75,19 +91,7 @@ function App() {
                 </li>)
           }   
       </ul>
-      <div className="form">
-        <label>Título</label>
-        <input className="input" type="text" id="newTitle"/><br/>
-        <label>Url</label>
-        <input className="input" type="text" id="newUrl"/><br/>
-        <label>Tecnologia 1</label>
-        <input className="input" type="text" id="newTechnology1"/><br/>
-        <label>Tecnologia 2</label>
-        <input className="input" type="text" id="newTechnology2"/><br/>
-        <label>Tecnologia 3</label>
-        <input className="input" type="text" id="newTechnology3"/><br/>
-        <button onClick={handleAddRepository}>Adicionar</button>
-      </div>
+      <br/>
     </div>
   );
 }
